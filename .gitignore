@@ -1,5 +1,5 @@
-.classpath
-.project
-.settings/
 /target/
-.DS_Store
+/test-output/
+/.classpath
+/bin/
+/.DS_Store
