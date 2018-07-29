@@ -1,4 +1,4 @@
-package com.skywareinventory.utilities;
+package test.java.com.skywareinventory.utilities;
 
 import java.io.FileInputStream;
 import java.util.Properties;
@@ -6,8 +6,10 @@ import java.util.Properties;
 public class ConfigurationReader {
 	private static Properties configFile;
 
+	
 	static {
 
+		
 		try {
 			String path = "configuration.properties";
 			FileInputStream input = new FileInputStream(path);

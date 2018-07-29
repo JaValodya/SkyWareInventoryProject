@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="skywareinventory Test" verbose="2">
+
+	<test name="skywareinventory LoginTest">
+		<packages>
+			<package name="test.java.com.skywareinventory.tests"></package>
+		</packages>
+	</test>
+
+</suite>

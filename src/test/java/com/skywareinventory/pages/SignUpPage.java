@@ -1,4 +1,4 @@
-package com.skywareinventory.pages;
+package test.java.com.skywareinventory.pages;
 
 public class SignUpPage {
 
