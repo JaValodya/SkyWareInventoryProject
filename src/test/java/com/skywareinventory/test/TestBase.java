@@ -45,6 +45,9 @@ public class TestBase {
 	protected String zipCode = faker.address().zipCode();
 	protected String phoneNumber = faker.phoneNumber().cellPhone();
 	protected String choosenState = "Colorado";
+	protected String confirmationAccount = "Your new profile has been created! Please check your email to activate.";
+	protected String invalidEmail = "ololo.gmail.com@";
+	protected String errorEmailMessage = "Please enter a valid email address.";
 	
 	@BeforeTest
 	  public void setUpTest() {

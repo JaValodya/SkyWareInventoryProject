@@ -16,7 +16,7 @@ import com.skywareinventory.utilities.ConfigurationReader;
 
 public class Home extends TestBase{
 
-	//@Ignore 
+	@Ignore 
 	@Test(priority = 1)
 	public void loginTest_SPA481 () throws InterruptedException {
 	HomePage homePage = new HomePage();
@@ -50,12 +50,12 @@ public class Home extends TestBase{
 	signUpForFreePage.closeCookieButton.click();
 	signUpForFreePage.acceptCheckbox.click();
 	signUpForFreePage.createAccountButton.click();
-	driver.get("https://www.skywareinventory.com/login?ref=registersuccess");
-	assertTrue(driver.findElement(By.xpath("	//*[@id=\"messages\"]")).getText().equals("Your new profile has been created! Please check your email to activate.") );
+	driver.get(ConfigurationReader.getProperty("confirmationPage"));
+	assertTrue(driver.findElement(By.xpath("	//*[@id=\"messages\"]")).getText().equals(confirmationAccount) );
 	driver.close();
 	
 	}
-	//@Ignore
+	@Ignore
 	@Test(priority = 2)
 	public void signUpFunctionality_SPA488() {
 		HomePage homePage = new HomePage();
@@ -97,12 +97,12 @@ public class Home extends TestBase{
 		signUpForFreePage.closeCookieButton.click();
 		signUpForFreePage.acceptCheckbox.click();
 		signUpForFreePage.createAccountButton.click();
-		driver.get("https://www.skywareinventory.com/login?ref=registersuccess");
-		assertTrue(driver.findElement(By.xpath("	//*[@id=\"messages\"]")).getText().equals("Your new profile has been created! Please check your email to activate.") );
+		driver.get(ConfigurationReader.getProperty("confirmationPage"));
+		assertTrue(driver.findElement(By.xpath("	//*[@id=\"messages\"]")).getText().equals(confirmationAccount) );
 		driver.close();
 	}
 	
-	//@Ignore
+	@Ignore
 	@Test(priority = 3)
 	public void signUpFunctionality_SPA490 () {
 		HomePage homePage = new HomePage();
@@ -118,6 +118,7 @@ public class Home extends TestBase{
 		actual = signUpForFreePage.accountSettings.getText();
 		expected = "Account Settings";
 		assertTrue(actual.equals(expected));
+		signUpForFreePage.emailField.sendKeys(randomEmail);
 		sendedPassword = randomPassword;
 		signUpForFreePage.passwordField.sendKeys(sendedPassword);
 		signUpForFreePage.passwordConfirmationField.sendKeys(sendedPassword);
@@ -127,12 +128,48 @@ public class Home extends TestBase{
 		WebElement mySelect = signUpForFreePage.selectState;
 		Select stateDropdown = new Select(mySelect);
 		stateDropdown.selectByVisibleText(choosenState);	
+		signUpForFreePage.acceptCheckbox.click();
+		signUpForFreePage.createAccountButton.click();
+		driver.get(ConfigurationReader.getProperty("confirmationPage"));
+		assertTrue(driver.findElement(By.xpath("	//*[@id=\"messages\"]")).getText().equals(confirmationAccount) );
+		driver.close();
 			
 			
 		}
+	@Ignore
+	@Test(priority = 4)
+	public void signUpFunctionalitySPA493 () {
+		HomePage homePage = new HomePage();
+		SignUpForFreePage signUpForFreePage = new SignUpForFreePage();
+		assertTrue(driver.getTitle().equals(ConfigurationReader.getProperty("homePageTitle")));
+		homePage.signUpForFreeButton.click();
+		actual = signUpForFreePage.basicInfo.getText();
+		expected = "Basic Info";
+		assertTrue(actual.equals(expected));
+		actual = signUpForFreePage.profileInfo.getText();
+		expected = "Profile Info";
+		assertTrue(actual.equals(expected));
+		actual = signUpForFreePage.accountSettings.getText();
+		expected = "Account Settings";
+		assertTrue(actual.equals(expected));
+		signUpForFreePage.emailField.sendKeys(invalidEmail);
+		sendedPassword = randomPassword;
+		signUpForFreePage.passwordField.sendKeys(sendedPassword);
+		signUpForFreePage.passwordConfirmationField.sendKeys(sendedPassword);
+		signUpForFreePage.companyNameField.sendKeys(companyName);
+		signUpForFreePage.firstNameField.sendKeys(firstName);
+		signUpForFreePage.lastNameField.sendKeys(lastName);
+		WebElement mySelect = signUpForFreePage.selectState;
+		Select stateDropdown = new Select(mySelect);
+		stateDropdown.selectByVisibleText(choosenState);	
+		signUpForFreePage.acceptCheckbox.click();
+		signUpForFreePage.createAccountButton.click();
+		assertTrue(signUpForFreePage.errorMessageField.getText().equals(errorEmailMessage));
+		driver.close();
+		
 
 	
-	
+	}
 	
 	
 	}

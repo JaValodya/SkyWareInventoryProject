@@ -89,6 +89,9 @@ public class SignUpForFreePage {
 	@FindBy(xpath = "//*[@id=\"feesFalse\"]")
 	public WebElement trackMiscFeesRadioOptionNo;
 	
+	@FindBy(xpath = "")
+	public WebElement errorMessageField;
+	
 
 	
 
