@@ -18,7 +18,7 @@ public class Home extends TestBase{
 
 	@Ignore 
 	@Test(priority = 1)
-	public void loginTest() throws InterruptedException {
+	public void loginTest_SPA481 () throws InterruptedException {
 	HomePage homePage = new HomePage();
 	SignUpForFreePage signUpForFreePage = new SignUpForFreePage();
 	assertTrue(driver.getTitle().equals(ConfigurationReader.getProperty("homePageTitle")));
@@ -57,7 +57,7 @@ public class Home extends TestBase{
 	}
 	//@Ignore
 	@Test(priority = 2)
-	public void signUpFunctionalityPositive() {
+	public void signUpFunctionality_SPA488() {
 		HomePage homePage = new HomePage();
 		SignUpForFreePage signUpForFreePage = new SignUpForFreePage();
 		assertTrue(driver.getTitle().equals(ConfigurationReader.getProperty("homePageTitle")));
