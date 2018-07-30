@@ -71,7 +71,7 @@ public class WebDashBoadPage {
 		login.password.sendKeys(prop.getProperty("password"));
 		login.loginBtn.click();
 	}
-
+	// SPA-513
 	@Test(priority = 2)
 
 	public void itemCheck() throws InterruptedException {
@@ -81,11 +81,6 @@ public class WebDashBoadPage {
 		DashboardPage dash = new DashboardPage(driver);
 		// goes to items button and click on it in the dash board page
 		dash.itemsButton.click();
-
-		// // verify if the item list is loaded.
-		// String actual = items.itemListText.getText();
-		// String expected = "Item List";
-		// assertEquals(actual, expected);
 
 		// goes to click for new item button
 		Thread.sleep(2000);
@@ -137,7 +132,8 @@ public class WebDashBoadPage {
 		}
 
 	}
-
+	
+	//SPA-516
 	@Test(priority = 3)
 	public void fieldCheck() {
 
@@ -164,10 +160,20 @@ public class WebDashBoadPage {
 		String expected = "Name is required";
 		assertEquals(actual, expected);
 		
-		//goes to name field and types "new generated name"
-		items.nameField.sendKeys(new Faker().name().fullName());
+		
 
 	}
+	
+	//SPA-517
+	@Test (priority = 4)
+	public void AddName() {
+		ItemsPage items = new ItemsPage(driver);
+		//goes to name field and types "new generated name"
+				items.nameField.sendKeys(new Faker().name().fullName());
+	}
+	
+	
+	//SPA-521 
 	@Test (priority = 4)
 	public void deleteItem() throws AWTException, InterruptedException {
 		
@@ -201,7 +207,7 @@ public class WebDashBoadPage {
 		
 		WebElement element1 = driver.findElement(By.className("delete"));
 		Actions action1 = new Actions(driver);
-		action.moveToElement(element1).click().perform();
+		action1.moveToElement(element1).click().perform();
 		
 		items.deletIt.click();
 		
