@@ -174,7 +174,7 @@ public class WebDashBoadPage {
 	
 	
 	//SPA-521 
-	@Test (priority = 4)
+	@Test (priority = 5)
 	public void deleteItem() throws AWTException, InterruptedException {
 		
 		ItemsPage items = new ItemsPage(driver);
