@@ -1,15 +1,16 @@
-package test.java.com.skywareinventory.tests;
+package com.skywareinventory.tests;
 
 import static org.testng.Assert.*;
+
 
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
-import test.java.com.skywareinventory.pages.HomePage;
-import test.java.com.skywareinventory.pages.LoginPage;
-import test.java.com.skywareinventory.utilities.BrowserUtils;
-import test.java.com.skywareinventory.utilities.Driver;
-import test.java.com.skywareinventory.utilities.TestBase;
+import com.skywareinventory.pages.HomePage;
+import com.skywareinventory.pages.LoginPage;
+import com.skywareinventory.utilities.BrowserUtils;
+import com.skywareinventory.utilities.Driver;
+import com.skywareinventory.utilities.TestBase;
 
 public class Homepage_LoginTest extends TestBase{
 	HomePage homepage=new HomePage();

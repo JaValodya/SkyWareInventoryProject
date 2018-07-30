@@ -1,10 +1,10 @@
-package test.java.com.skywareinventory.pages;
+package com.skywareinventory.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import test.java.com.skywareinventory.utilities.Driver;
+import com.skywareinventory.utilities.Driver;
 
 public class LoginPage {
 	public LoginPage() {

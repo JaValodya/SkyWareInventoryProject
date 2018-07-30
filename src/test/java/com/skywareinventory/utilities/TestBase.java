@@ -1,4 +1,4 @@
-package test.java.com.skywareinventory.utilities;
+package com.skywareinventory.utilities;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;

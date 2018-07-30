@@ -1,12 +1,13 @@
-package test.java.com.skywareinventory.tests;
+package com.skywareinventory.tests;
 
 import static org.testng.Assert.assertEquals;
 
+
 import org.testng.annotations.Test;
 
-import test.java.com.skywareinventory.pages.LoginPage;
-import test.java.com.skywareinventory.utilities.BrowserUtils;
-import test.java.com.skywareinventory.utilities.TestBase;
+import com.skywareinventory.pages.LoginPage;
+import com.skywareinventory.utilities.BrowserUtils;
+import com.skywareinventory.utilities.TestBase;
 
 public class ResetPassword_test extends TestBase{
 	

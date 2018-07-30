@@ -1,4 +1,4 @@
-package test.java.com.skywareinventory.utilities;
+package com.skywareinventory.utilities;
 
 import java.io.File;
 import java.io.IOException;

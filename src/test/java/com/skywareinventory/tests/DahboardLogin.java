@@ -1,13 +1,14 @@
-package test.java.com.skywareinventory.tests;
+package com.skywareinventory.tests;
 
 import static org.testng.Assert.assertEquals;
+
 import static org.testng.Assert.assertTrue;
 
 import org.testng.annotations.Test;
 
-import test.java.com.skywareinventory.pages.LoginToDashBorad;
-import test.java.com.skywareinventory.utilities.ConfigurationReader;
-import test.java.com.skywareinventory.utilities.TestBase;
+import com.skywareinventory.pages.LoginToDashBorad;
+import com.skywareinventory.utilities.ConfigurationReader;
+import com.skywareinventory.utilities.TestBase;
 
 public class DahboardLogin extends TestBase {
 	LoginToDashBorad logindash=new LoginToDashBorad();
