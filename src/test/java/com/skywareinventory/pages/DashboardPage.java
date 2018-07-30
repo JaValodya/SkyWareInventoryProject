@@ -5,18 +5,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.google.common.graph.NetworkBuilder;
-
-public class HomePage {
-
+public class DashboardPage {
 	
-
-	public HomePage(WebDriver driver) {
+	public DashboardPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
-
-	@FindBy(xpath = "//a[@class ='button login']")
-	public WebElement loginButton;
-
 	
+	@FindBy (xpath = "//li[@id='newThirdtab'][2]")
+	public WebElement itemsButton;
+	
+	
+	
+	
+
 }
