@@ -17,8 +17,9 @@ public class LoginPage {
 	@FindBy(id = "username" )
 	public WebElement userName;
 	
-	@FindBy (id ="password" )
-	public WebElement password;
+	//this findBy by is exist in the delbar branch file. solution commented out. leaved for example
+//	@FindBy (id ="password" )
+//	public WebElement password;
 	
 	@FindBy( xpath = "//input[@type='submit']")
 	public WebElement loginBtn;
