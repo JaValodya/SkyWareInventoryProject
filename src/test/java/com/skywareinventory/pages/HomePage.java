@@ -9,10 +9,20 @@ import com.skywareinventory.utilities.Driver;
 
 public class HomePage {
 	
-	//delbar
-	public HomePage() {
-		PageFactory.initElements(Driver.getDriver(), this);
-	}
+	//kostya
+// 		public HomePage() {
+// 		PageFactory.initElements(Driver.getDriver(), this);
+// 	}
+// 	@FindBy(xpath = "//a[@class ='button login']")
+// 	public WebElement loginButton;
+	
+	@FindBy(xpath = "//*[@id=\"signup-free\"]/a")
+	public WebElement signUpForFreeButton;
+	
+// 	//delbar
+// 	public HomePage() {
+// 		PageFactory.initElements(Driver.getDriver(), this);
+// 	}
 
 	/*
 	 * Verify the following: 1)www.skywareinventory.com home page appears. 2)Title
