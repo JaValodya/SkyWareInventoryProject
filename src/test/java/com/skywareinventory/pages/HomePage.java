@@ -14,9 +14,10 @@ public class HomePage {
 	/*
 	 * Verify the following: 1)www.skywareinventory.com home page appears. 2)Title
 	 * of a loaded page is equal to expected title
-	 * local crash line
+	 * crasi line
 	 */
 	@FindBy(id = "logo")
 	public WebElement title;
+	
 
 }
