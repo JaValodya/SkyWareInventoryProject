@@ -14,6 +14,7 @@ public class HomePage {
 		PageFactory.initElements(Driver.getDriver(), this);
 	}
 
+<<<<<<< HEAD
 	/*
 	 * Verify the following: 1)www.skywareinventory.com home page appears. 2)Title
 	 * of a loaded page is equal to expected title
@@ -22,6 +23,22 @@ public class HomePage {
 	public WebElement title;
 	
 	//kamil 
+=======
+	//his one is to help to merge second attempt
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+>>>>>>> 9df32786b72daa9f6e60493c8be54ec2f6c5d633
 	public HomePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
@@ -29,4 +46,8 @@ public class HomePage {
 	@FindBy(xpath = "//a[@class ='button login']")
 	public WebElement loginButton;
 
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 9df32786b72daa9f6e60493c8be54ec2f6c5d633
 }
