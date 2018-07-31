@@ -1,22 +1,21 @@
 package com.skywareinventory.pages;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.google.common.graph.NetworkBuilder;
+import com.skywareinventory.utilities.Driver;
 
 public class HomePage {
-
-	//his one is to help to merge
-
-	public HomePage(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+	public HomePage() {
+		PageFactory.initElements(Driver.getDriver(), this);
 	}
 
-	@FindBy(xpath = "//a[@class ='button login']")
-	public WebElement loginButton;
+	/*
+	 * Verify the following: 1)www.skywareinventory.com home page appears. 2)Title
+	 * of a loaded page is equal to expected title
+	 */
+	@FindBy(id = "logo")
+	public WebElement title;
 
-	
 }
