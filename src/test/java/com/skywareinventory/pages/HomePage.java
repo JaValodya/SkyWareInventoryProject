@@ -11,6 +11,18 @@ public class HomePage {
 
 	//his one is to help to merge second attempt
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public HomePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
