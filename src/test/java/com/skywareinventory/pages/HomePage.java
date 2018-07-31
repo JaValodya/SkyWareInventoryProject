@@ -10,9 +10,9 @@ import com.skywareinventory.utilities.Driver;
 public class HomePage {
 	
 	//kostya
-// 		public HomePage() {
-// 		PageFactory.initElements(Driver.getDriver(), this);
-// 	}
+ 		public HomePage() {
+ 		PageFactory.initElements(Driver.getDriver(), this);
+ 	}
 // 	@FindBy(xpath = "//a[@class ='button login']")
 // 	public WebElement loginButton;
 	
