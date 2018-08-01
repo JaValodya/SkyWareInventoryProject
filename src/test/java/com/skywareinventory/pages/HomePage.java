@@ -19,7 +19,7 @@ public class HomePage {
 	@FindBy(xpath = "//*[@id=\"signup-free\"]/a")
 	public WebElement signUpForFreeButton;
 	
-// 	//delbar
+ 	//delbar
 // 	public HomePage() {
 // 		PageFactory.initElements(Driver.getDriver(), this);
 // 	}

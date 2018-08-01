@@ -1,4 +1,4 @@
-This file contains instructions for operating 
+This file contains instructions for managing  
 the project "SkyWereInwentoryProject" as a team:
 ================================================
 Git Network:
@@ -15,10 +15,13 @@ Working in the git network:
 
      --Please work only at the branch with your name;
        Hint: 
-            +++ to check available branches use command "git branch" (branch you are currently in 
+            +1+ to check available branches use command "git branch" (branch you are currently in 
                 will be highlighted in green)  
-            +++ to switch to YOUR branch use command 
-     --Commit and Push only to the branch with your name;
-     --Please do not commit to the workingbranch or muster branchs(this will be done during the review);
-     --
+            +2+ to switch between branch use command "git checkout [branch name]"
+                ([branch name] - name of the branch you want to switch to )
+                
+     -- use "git add" and "git push" only to the branch with your name;
+     -- Please do not commit to the 'workingbranch' or 'muster' branches;
+     -- Before starting work on the project make sure you have the latest version of the project:
+        Step 1: run "git pull" commant when you are on the 'workingbranch' ( See Hint: +2+)
        
