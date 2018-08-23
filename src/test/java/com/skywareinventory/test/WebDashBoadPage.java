@@ -126,9 +126,9 @@ public class WebDashBoadPage {
 		String expected5 = "Price";
 		assertEquals(actual5, expected5);
 		if (actual5.equals(expected5)) {
-			System.out.println("Price filed is displayed");
+			System.out.println("Price field is displayed");
 		} else {
-			System.out.println("Price filed is NOT displayed");
+			System.out.println("Price field is NOT displayed");
 		}
 
 	}
